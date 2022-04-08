@@ -18,4 +18,8 @@ router.get('/', (req, res) => {
     // console.log('index rendered')
 })
 
+router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
+
 module.exports = router
