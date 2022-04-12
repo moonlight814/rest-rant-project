@@ -44,7 +44,7 @@ router.get('/new', (req, res) => {
           places[id] = req.body;
     res.redirect(`/places/${id}`);
   }
-});
+})
   
   router.get("/:id/edit", (req, res) => {
     let id = req.params.id;
@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
     res.redirect('/places')
 })
 
-router.delete('/places/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
       res.render('error404')
