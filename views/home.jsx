@@ -6,7 +6,7 @@ function home () {
       <Def>
           <main>
               <h1>REST-Rant</h1>
-              <div>
+              <div className="center_home">
                   <img src="/images/image_homepage.jpg" alt="variety of foods on plate" />
               <div id= 'anchorImage'>
                   Photo by <a href="https://unsplash.com/@lvnatikk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brenda Godiner</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

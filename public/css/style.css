@@ -6,7 +6,7 @@ h1 {
   img {
     float: left;
     width:  200px;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -49,3 +49,21 @@ body {
     margin-left: 20px;
     background-color: white;
   }
+  
+/* .center_home {
+    position: absolute;
+ 
+} */
+
+.center_home img{
+    text-align: center;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 400px;
+}
+
+.img_fluid{
+   padding-left: 12px;
+}
