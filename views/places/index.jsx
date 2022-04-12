@@ -7,6 +7,7 @@ function index (data) {
           <div className="col-sm-6">
             <h2>
                 <a href={`/places/${place.id}`}>
+                
                 {place.name}
                 </a>
                 </h2>
