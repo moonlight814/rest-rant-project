@@ -16,7 +16,10 @@ function index (data) {
             <img src={place.pic} alt={place.name} />
             <p>
               Located in {place.city}, {place.state}
+              <br />
+              Founded in {place.founded}
             </p>
+           
           </div>
         )
       })
