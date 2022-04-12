@@ -6,10 +6,11 @@ function show(data) {
     <Def>
       <main>
         <h1>{data.place.name}</h1>
+        <img src={data.place.pic} />
         <h2>Rating</h2>
         <p>Not Rated</p>
         <h2>Description</h2>
-        <p>Located in Phoenix, AZ and serving Coffee, Bakery</p>
+        <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
         <h2>Comments</h2>
         <p>No comments yet!</p>
         <a href={`/places/${data.id}/edit`} className="btn btn-warning">

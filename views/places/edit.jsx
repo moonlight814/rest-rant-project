@@ -25,6 +25,7 @@ function edit_form (data) {
                                 className="form-control" 
                                 id="pic" 
                                 name="pic" 
+                                value={data.place.pic}
                             />
                         </div>
                     </div>
@@ -35,6 +36,7 @@ function edit_form (data) {
                                 className="form-control" 
                                 id="city" 
                                 name="city" 
+                                value={data.place.city}
                             />
                         </div>
                         <div className="form-group col-sm-6">
@@ -43,6 +45,7 @@ function edit_form (data) {
                                 className="form-control" 
                                 id="state" 
                                 name="state" 
+                                value={data.place.state}
                             />
                         </div>
                     </div>
@@ -52,6 +55,7 @@ function edit_form (data) {
                             className="form-control" 
                             id="cuisines" 
                             name="cuisines" 
+                            value={data.place.cuisines}
                             // required 
                         />
                     </div>
