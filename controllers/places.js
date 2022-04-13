@@ -48,6 +48,8 @@ router.get("/new", (req, res) => {
   res.render("places/new");
 });
 
+
+//show
 router.get("/:id", (req, res) => {
   db.Place.findById(req.params.id)
     .populate("comments")
@@ -60,6 +62,18 @@ router.get("/:id", (req, res) => {
       res.render("error404");
     });
 });
+
+router.put('/:id', (req, res) => {
+  db.Place.findByIdAndUpdate(req.params.id, req.body)
+  .then(updatedPlace => {
+    console.log(updatedPlace)
+      res.redirect(`/places/${req.params.id}`)
+  })
+  .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+  })
+})
 
 router.post('/:id/comment', (req, res) => {
   console.log(req.body)
@@ -82,25 +96,6 @@ router.post('/:id/comment', (req, res) => {
   })
 })
 
-router.put('/:id', (req, res) => {
-  db.Place.findByIdAndUpdate(req.params.id, req.body)
-  .then(place => {
-      res.redirect(`/places/${req.params.id}`)
-  })
-  .catch(err => {
-      console.log('err', err)
-      res.render('error404')
-  })
-})
-
-router.delete("/:id", (req, res) => {
-  Places.findByIdAndDelete(req.params.id)
-  .then(deletedPlace => {
-    res.status(303).redirect('/places')
-  })
-})
-
-
 //edit
 router.get('/:id/edit', (req, res) => {
   db.Place.findById(req.params.id)
@@ -111,6 +106,17 @@ router.get('/:id/edit', (req, res) => {
           res.render('error404')
       })
 })
+
+
+
+router.delete("/:id", (req, res) => {
+  Places.findByIdAndDelete(req.params.id)
+  .then(deletedPlace => {
+    res.status(303).redirect('/places')
+  })
+})
+
+
 
 router.post("/:id/rant", (req, res) => {
   res.send("GET /places/:id/rant stub");

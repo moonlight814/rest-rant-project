@@ -10,9 +10,9 @@ function show ({place}) {
     )
 
     let rating = ( 
-        <h3 className='inactive'>
+        <p className='inactive'>
             Not yet Rated
-        </h3>
+        </p>
     )
 
 
@@ -62,13 +62,13 @@ function show ({place}) {
                             {rating}
                         </div>
                         <div>
-                            <h2>Desciption</h2>
-                            <h3>
+                            <h2>Description</h2>
+                            <p>
                                 {place.showEstablished()}
-                            </h3>
-                            <h4>
+                            </p>
+                            <p>
                                 Serving {place.cuisines}
-                            </h4>
+                            </p>
                         </div>
                         <a href={`/places/${place.id}/edit`} className="btn btn-warning">
                             Edit
@@ -126,6 +126,7 @@ function show ({place}) {
                                         <input
                                             className="form-check-input"
                                             type="checkbox"
+                                            text-align="center"
                                             id="rant"
                                             name="rant"
                                         />
