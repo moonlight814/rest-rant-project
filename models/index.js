@@ -9,3 +9,4 @@ mongoose.connect(process.env.MONGO_URI, {
 console.log('mongo live'))
 
 module.exports.Place= require('./places')
+module.exports.Comment= require('./comment')

@@ -64,6 +64,6 @@ body {
   width: 400px;
 }
 
-.img_fluid{
-   padding-left: 12px;
-}
+/* .img_fluid{
+   padding: auto;
+} */
